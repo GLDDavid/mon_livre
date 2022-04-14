@@ -1,0 +1,151 @@
+#Evolution Mondiale
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+
+library(flexdashboard)
+
+library(tidyverse)
+
+setwd("C:/Users/Cefim/Desktop/cours data/cours_R/TP_R_Cefim")
+
+# aide
+# flexdashboard https://shiny.rstudio.com/articles/dashboards.html
+
+
+```
+
+
+
+## ROW 1 {data-with=650}
+------
+
+### Evolution de la population
+
+```{r}
+
+population<-read_delim("WPP2019_POP_F01_1_TOTAL_POPULATION_BOTH_SEXES_UN.csv",                                
+                        skip=16,
+                        na="...",
+                        locale=locale(decimal_mark=","))|> 
+                        rename(region=3)  |> 
+                        select(region,Type,"1950":"2020") |> 
+                        pivot_longer(cols="1950":"2020",
+                                     names_to = "annee",
+                                     values_to="population")
+
+
+population_region<-population |> distinct(region)
+
+population |>  
+  filter(Type=="World") |> 
+
+ggplot()+
+  aes(annee,population,group=1)+
+  geom_point()+
+  geom_line(size=2)
+
+
+```
+
+
+
+### Evolution de la production de nourriture
+
+
+```{r}
+
+food<-read_delim("Production_Crops_Livestock_E_All_Data.csv",
+                 locale=locale(encoding="ISO-8859-1")) |>
+                  select(-ends_with("F")) |> 
+                  pivot_longer(cols=Y1961:Y2020,
+                               names_to="annee",
+                               values_to = "valeur") |> 
+                  mutate(annee=str_remove(annee,"Y"))
+
+
+staple_food_world<-food |> 
+  filter(Area=="World",Element=="Production") |> 
+  filter(str_detect(Item,pattern="Total"))
+
+
+ggplot(staple_food_world)+
+  aes(x=annee,y=valeur,colour=Item)+
+  geom_point()+
+  geom_line(aes(group=Item))
+
+
+
+```
+
+
+
+
+## ROW 2 {data-with=650}
+------
+
+### Evolution de la consommation d'energie par Sources d'énergie
+
+
+```{r}
+
+energy<-read_delim("owid-energy-data__OWID.csv") |> 
+  select(1:3,ends_with("consumption"))|> 
+  pivot_longer(cols=4:16,
+               names_to="type_energie",
+               values_to="consommation")
+
+energy_monde_source<-energy |>
+  filter(country=="World") |> 
+  filter(type_energie=="biofuel_consumption"|
+         type_energie=="coal_consumption"|
+         type_energie=="gas_consumption"|
+         type_energie=="hydro_consumption"|
+         type_energie=="nuclear_consumption"|
+         type_energie=="oil_consumption"|
+         type_energie=="solar_consumption"|
+         type_energie=="wind_consumption")
+# 
+ggplot(subset(energy_monde_source, consommation > 0))+
+  aes(year,consommation,fill=type_energie)+
+  #geom_line()+
+  geom_col()
+
+
+
+
+```
+
+
+### Evolution de la consommation d'energie par Type
+
+
+```{r}
+
+energy_monde_type<-energy |>
+  filter(country=="World") |> 
+  filter(type_energie=="fossil_fuel_consumption"|
+         type_energie=="low_carbon_consumption"|
+         type_energie=="other_renewable_consumption"|
+         type_energie=="renewables_consumption")
+
+# 
+ggplot(energy_monde_type)+
+  aes(year,consommation,fill=type_energie)+
+  #geom_line()+
+  geom_col()
+
+
+```
+
+
+
+
+
+

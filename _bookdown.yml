@@ -1,11 +1,12 @@
 book_filename: "series"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Chapitre "
 rmd_files: [
   "index.Rmd",
   "setup.Rmd",
-  "chapitre_3.Rmd",
-  "chapitre4.Rmd"]
+  "worlddashboard.Rmd",
+  "continentdashboard.Rmd",
+  "mapdashboard.Rmd"]
 delete_merged_file: true 
 output_dir: "docs"
