@@ -1,4 +1,4 @@
-#Evolution Mondiale
+# Evolution Mondiale
 
 
 ```{r setup, include=FALSE}
@@ -17,6 +17,7 @@ setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/
 
 # aide
 # flexdashboard https://shiny.rstudio.com/articles/dashboards.html
+
 
 
 ```

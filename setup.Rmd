@@ -26,3 +26,6 @@ https://github.com/GLDDavid/mon_livre.git
 ## Moving forward
 
 As you write your .Rmd files, build the book and commit all files, including the docs/ folder, and your published book will be updated!
+
+
+

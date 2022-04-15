@@ -19,7 +19,6 @@ Ceci est un super bookdown, il est trop Bien.
 1. visualisation d'un dashboard concernant les continents
 1. pour aller plus loin, direction shinyApp:
     - ([shinyapp](https://dgld.shinyapps.io/shinyapp/))
-
 ----
 
 
@@ -33,6 +32,7 @@ Ce TP est fait dans le but d'apprendre R bookdown.
 ## R ou Python
 
 R est indiqué pour le calcul des nombres et l'analyse statistique alors que Python a l'avantage d'être **extrêmement polyvalent**. L'apprentissage de Python est donc à privilégier si vous souhaitez appliquer les connaissances acquises au niveau de différents types de tâches.
+
 
 
 <!--chapter:end:index.Rmd-->
@@ -66,9 +66,12 @@ https://github.com/GLDDavid/mon_livre.git
 
 As you write your .Rmd files, build the book and commit all files, including the docs/ folder, and your published book will be updated!
 
+
+
+
 <!--chapter:end:setup.Rmd-->
 
-#Evolution Mondiale
+# Evolution Mondiale
 
 
 ```{r setup, include=FALSE}
@@ -87,6 +90,7 @@ setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/
 
 # aide
 # flexdashboard https://shiny.rstudio.com/articles/dashboards.html
+
 
 
 ```
@@ -222,7 +226,7 @@ ggplot(energy_monde_type)+
 
 <!--chapter:end:worlddashboard.Rmd-->
 
-#Evolution Population / Nourriture / Energie par Continent
+# Evolution Population / Nourriture / Energie par Continent
 
 ```{r setup, include=FALSE}
 
@@ -372,7 +376,7 @@ ggplot(type_energy_continent)+
 
 <!--chapter:end:continentdashboard.Rmd-->
 
-#Evolution Monde
+# Evolution Monde
 
 
 

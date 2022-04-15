@@ -19,7 +19,6 @@ Ceci est un super bookdown, il est trop Bien.
 1. visualisation d'un dashboard concernant les continents
 1. pour aller plus loin, direction shinyApp:
     - ([shinyapp](https://dgld.shinyapps.io/shinyapp/))
-
 ----
 
 
@@ -33,4 +32,5 @@ Ce TP est fait dans le but d'apprendre R bookdown.
 ## R ou Python
 
 R est indiqué pour le calcul des nombres et l'analyse statistique alors que Python a l'avantage d'être **extrêmement polyvalent**. L'apprentissage de Python est donc à privilégier si vous souhaitez appliquer les connaissances acquises au niveau de différents types de tâches.
+
 
