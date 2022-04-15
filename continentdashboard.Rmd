@@ -12,7 +12,7 @@ library(flexdashboard)
 
 library(tidyverse)
 
-setwd("C:/Users/Cefim/Desktop/cours data/cours_R/TP_R_Cefim")
+setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/template")
 
 # aide
 # flexdashboard https://shiny.rstudio.com/articles/dashboards.html
