@@ -4,7 +4,6 @@ language:
     chapter_name: "Chapitre "
 rmd_files: [
   "index.Rmd",
-  "setup.Rmd",
   "worlddashboard.Rmd",
   "continentdashboard.Rmd",
   "mapdashboard.Rmd"]

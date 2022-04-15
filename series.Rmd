@@ -22,6 +22,7 @@ Ceci est un super bookdown, il est trop Bien.
 ----
 
 
+
 **Explication:**
 
 Ce TP est fait dans le but d'apprendre R bookdown.
@@ -36,40 +37,6 @@ R est indiqué pour le calcul des nombres et l'analyse statistique alors que Pyt
 
 
 <!--chapter:end:index.Rmd-->
-
-# Connecter Bookdown à Github {#setup}
-
-## Démarche actualisée - 24-03-2022
-1. Go to your GitHub account: github.com/username
-2. Click on Repositories, and the green button "New" to create a new repo
-3. Name this new repo "mon_livre"
-4. DO NOT initialize this repo with a README
-5. Click the green "create repository" button — this will take you to your new repo
-6. Click the tiny "clone or download" button near the top and COPY URL
-
-https://github.com/GLDDavid/mon_livre.git
-
-7. In the Console, type `usethis::use_git()` and say Yes to the two prompts. This will restart R and give you a new Git tab in the upper right pane.
-8. Now, click on the Terminal tab next to the Console tab. 
-9. Type git remote add monlivre https://github.com/GLDDavid/mon_livre.git
-10. Type `git push --set-upstream monlivre master`
-11. Go back to github.com/username/"mon_livre" and refresh — our files should be there! But we want it to be a book published as https://username.github.io/mon_livre.
-12. Click 'Settings' (la roue dentée en haut à droite sous Pin)
-13. sur le coté gauche cliquer dans 'Pages'
-14. Change the Source pulldown from "None" to "master branch /docs folder"
-15. It should say "Your site is ready to be published at https://username.github.io/mon_livre/" — click the link to see but error page
-16.effacer le readme, le bouton environnement en bas à droite de la page avec une fusée apparait
-17. cliquer dessus ça marche (il faut attendre un peu des fois et recharger la page)
-
-
-## Moving forward
-
-As you write your .Rmd files, build the book and commit all files, including the docs/ folder, and your published book will be updated!
-
-
-
-
-<!--chapter:end:setup.Rmd-->
 
 # Evolution Mondiale
 
@@ -99,6 +66,7 @@ setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/
 
 ## ROW 1 {data-with=650}
 ------
+
 
 ### Evolution de la population
 
@@ -227,6 +195,7 @@ ggplot(energy_monde_type)+
 <!--chapter:end:worlddashboard.Rmd-->
 
 # Evolution Population / Nourriture / Energie par Continent
+
 
 ```{r setup, include=FALSE}
 
@@ -377,8 +346,6 @@ ggplot(type_energy_continent)+
 <!--chapter:end:continentdashboard.Rmd-->
 
 # Evolution Monde
-
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(

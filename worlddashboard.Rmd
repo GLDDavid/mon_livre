@@ -27,6 +27,7 @@ setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/
 ## ROW 1 {data-with=650}
 ------
 
+
 ### Evolution de la population
 
 ```{r}
