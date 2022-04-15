@@ -1,6 +1,6 @@
 # Evolution Monde
 
-```{r setup, include=FALSE}
+```{r include=FALSE}
 knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
@@ -13,7 +13,7 @@ library(tidyverse)
 
 library(countrycode)
 
-setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/template")
+#setwd("C:/Users/Cefim/Desktop/cours data/cours_R/seq_bookdown/template_bookdown/template")
 
 
 ```
