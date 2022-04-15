@@ -27,6 +27,7 @@ Ceci est un super bookdown, il est trop Bien.
 
 Ce TP est fait dans le but d'apprendre R bookdown.
 
+
 ----
 
 ## R ou Python
